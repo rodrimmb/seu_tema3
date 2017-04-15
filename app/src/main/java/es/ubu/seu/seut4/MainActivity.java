@@ -2,6 +2,7 @@ package es.ubu.seu.seut4;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -9,5 +10,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        changeTextOfLabel();
+    }
+
+    private void changeTextOfLabel() {
+        TextView label = (TextView) findViewById(R.id.main_label);
+        label.setText("Titulo de la app");
     }
 }
