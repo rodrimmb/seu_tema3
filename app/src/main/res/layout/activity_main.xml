@@ -7,25 +7,45 @@
     android:orientation="vertical"
     tools:context="es.ubu.seu.seut4.MainActivity">
 
-    <TextView
-        android:id="@+id/main_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/main_title" />
+    <RelativeLayout
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/main_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_title"
+            android:textSize="30dp"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
 
     <EditText
+        android:id="@+id/input_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/placeholder_main"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/submit"/>
+    <RelativeLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/cancel"/>
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/submit"
+            android:layout_toLeftOf="@+id/btn_cancel"/>
 
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
 </LinearLayout>
