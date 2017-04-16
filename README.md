@@ -28,3 +28,12 @@ height="300"
 />
 </p>
 
+## Ejercicio 4
+Haz que al pulsar el botón de la izquierda se abra una nueva ``` Activity ``` que solo contenga un texto. Y cuando se pulse el botón de la derecha se muestre un toast y se borre el texto del input si es que lo hay.
+
+Haz pruebas con los diferentes modos de implementar un Listener:
+* Que la propia ``` Activity ``` impleménte ``` AdapterView.OnItemClickListener ```.
+* Creando una clase anónima
+* Usando una clase externa
+
+
