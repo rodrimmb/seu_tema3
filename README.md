@@ -12,4 +12,11 @@ Modifica los tamaños de los elementos del ejercicio anterior usando match_paren
 Haz que el cuadro de texto (EditText) ocupe todo el ancho de la pantalla.
 ## Ejercicio 3
 Usa los layouts que hemos explicado (linera y relative layouts) y todo lo aprendido hasta ahora para que los elementos gráficos del ejercicio 1 se distribuyan como en la siguiente imagen.
+<p align="center">
+<img 
+src="https://raw.githubusercontent.com/rodrimmbdev/seu_t4/master/imgs/exercise_3.png"
+alt="Imagen ejercicio 3"
+height="300"
+/>
+</p>
 
