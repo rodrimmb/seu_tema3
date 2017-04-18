@@ -35,6 +35,6 @@ Haz pruebas con los diferentes modos de implementar un Listener:
 * Usando una clase externa
 * Con una inner class
 * Creando una clase anónima
-* Que la propia ``` Activity ``` impleménte ``` AdapterView.OnItemClickListener ```.
+* Que la propia ``` Activity ``` impleménte ``` View.OnClickListener ```.
 
 
