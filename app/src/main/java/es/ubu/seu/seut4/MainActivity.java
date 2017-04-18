@@ -13,7 +13,9 @@ import android.widget.Toast;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private final String LOG_TAG = "BUTTON_HANDLER";
 
     @BindView(R.id.main_label) TextView label;
     @BindView(R.id.btn_submit) Button btnSubmit;
@@ -27,35 +29,31 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         label.setText(R.string.exercise_title);
 
-        View.OnClickListener clickHandler = new View.OnClickListener() {
-            private final String LOG_TAG = "BUTTON_HANDLER";
+        btnSubmit.setOnClickListener(this);
+        btnCancel.setOnClickListener(this);
+    }
 
-            @Override
-            public void onClick(View v) {
-                if (v.getId() == R.id.btn_submit) {
-                    launchActivity();
-                }
+    @Override
+    public void onClick(View v) {
+        if (v.getId() == R.id.btn_submit) {
+            launchActivity();
+        }
 
-                if (v.getId() == R.id.btn_cancel) {
-                    clearInputText();
-                    Toast.makeText(getApplicationContext(), "Has pulsado cancelar", Toast.LENGTH_SHORT).show();
-                }
-            }
+        if (v.getId() == R.id.btn_cancel) {
+            clearInputText();
+            Toast.makeText(getApplicationContext(), "Has pulsado cancelar", Toast.LENGTH_SHORT).show();
+        }
+    }
 
-            private void clearInputText() {
-                if (!"".equals(inputText.getText().toString())) {
-                    Log.i(LOG_TAG, "Se borra el texto del input");
-                    inputText.setText("");
-                }
-            }
+    private void clearInputText() {
+        if (!"".equals(inputText.getText().toString())) {
+            Log.i(LOG_TAG, "Se borra el texto del input");
+            inputText.setText("");
+        }
+    }
 
-            private void launchActivity() {
-                Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
-                startActivity(intent);
-            }
-        };
-
-        btnSubmit.setOnClickListener(clickHandler);
-        btnCancel.setOnClickListener(clickHandler);
+    private void launchActivity() {
+        Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+        startActivity(intent);
     }
 }
