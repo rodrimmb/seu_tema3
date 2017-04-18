@@ -27,38 +27,35 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         label.setText(R.string.exercise_title);
 
-        View.OnClickListener clickHandler = new MainButtonsHandler();
+        View.OnClickListener clickHandler = new View.OnClickListener() {
+            private final String LOG_TAG = "BUTTON_HANDLER";
+
+            @Override
+            public void onClick(View v) {
+                if (v.getId() == R.id.btn_submit) {
+                    launchActivity();
+                }
+
+                if (v.getId() == R.id.btn_cancel) {
+                    clearInputText();
+                    Toast.makeText(getApplicationContext(), "Has pulsado cancelar", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            private void clearInputText() {
+                if (!"".equals(inputText.getText().toString())) {
+                    Log.i(LOG_TAG, "Se borra el texto del input");
+                    inputText.setText("");
+                }
+            }
+
+            private void launchActivity() {
+                Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                startActivity(intent);
+            }
+        };
 
         btnSubmit.setOnClickListener(clickHandler);
         btnCancel.setOnClickListener(clickHandler);
-    }
-
-    private class MainButtonsHandler implements View.OnClickListener {
-
-        private final String LOG_TAG = "BUTTON_HANDLER";
-
-        @Override
-        public void onClick(View v) {
-            if (v.getId() == R.id.btn_submit) {
-                launchActivity();
-            }
-
-            if (v.getId() == R.id.btn_cancel) {
-                clearInputText();
-                Toast.makeText(getApplicationContext(), "Has pulsado cancelar", Toast.LENGTH_SHORT).show();
-            }
-        }
-
-        private void clearInputText() {
-            if (!"".equals(inputText.getText().toString())) {
-                Log.i(LOG_TAG, "Se borra el texto del input");
-                inputText.setText("");
-            }
-        }
-
-        private void launchActivity() {
-            Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
-            startActivity(intent);
-        }
     }
 }
