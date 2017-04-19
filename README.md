@@ -37,4 +37,21 @@ Haz pruebas con los diferentes modos de implementar un Listener:
 * Creando una clase anónima
 * Que la propia ``` Activity ``` impleménte ``` View.OnClickListener ```.
 
+## Ejercicio 5
+Crea una lista simple usando una ``` ListView ``` en la activity ``` SecondActivity ```. Usa el código de ejemplo proporcionado para crear una lista con cuatro elementos de tipo ``` String```, utiliza la clase ```ArrayAdapter```para dibujar la lista.
+
+``` java
+<ListView
+   android:id="@+id/elements_list"
+   android:layout_width="match_parent"
+   android:layout_height="match_parent"/>
+
+
+@BindView(R.id.elements_list) ListView listView;
+...
+ButterKnife.bind(this);
+String[] elements = {"Elemento 1","Elemento 2","Elemento 3","Elemento 4"};
+listView.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, elements));
+``` 
+
 
