@@ -17,7 +17,6 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
         ButterKnife.bind(this);
-        String[] elements = {"Elemento 1","Elemento 2","Elemento 3","Elemento 4"};
-        listView.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, elements));
+        //TODO: Crear un array adapter para User y asociarlo a listView
     }
 }
