@@ -9,12 +9,14 @@ public class User {
     private String name;
     private String surname;
     private String position;
+    private String company;
 
-    public User(Long id, String name, String surname, String position){
+    public User(Long id, String name, String surname, String position, String company){
         this.id = id;
         this.name = name;
         this.surname = surname;
         this.position = position;
+        this.company = company;
     }
 
     public Long getId() {
@@ -47,5 +49,13 @@ public class User {
 
     public void setPosition(String position) {
         this.position = position;
+    }
+
+    public String getCompany() {
+        return company;
+    }
+
+    public void setCompany(String company) {
+        this.company = company;
     }
 }

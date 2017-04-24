@@ -7,16 +7,24 @@ import android.widget.ListView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import es.ubu.seu.seut4.adapters.UserAdapterButterKnife;
+import es.ubu.seu.seut4.model.User;
+import es.ubu.seu.seut4.services.UserService;
 
 public class SecondActivity extends AppCompatActivity {
 
     @BindView(R.id.elements_list) ListView listView;
+
+    private UserService userService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
         ButterKnife.bind(this);
-        //TODO: Crear un array adapter para User y asociarlo a listView
+
+        userService = new UserService();
+        ArrayAdapter<User> adapterUsers = new UserAdapterButterKnife(getApplicationContext(), userService.getAllUsers());
+        listView.setAdapter(adapterUsers);
     }
 }

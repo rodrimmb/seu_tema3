@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/user_name_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="22dp"
+        android:text="Nombre"
+        tools:text="Name" />
+
+    <TextView
+        android:id="@+id/user_surname_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@id/user_name_row"
+        android:layout_alignBottom="@id/user_name_row"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        android:text="Surname"
+        tools:text="Surname" />
+
+    <TextView
+        android:id="@+id/user_position_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/user_name_row"
+        android:layout_below="@+id/user_name_row"
+        android:text="Cargo"
+        tools:text="Position" />
+
+    <TextView
+        android:id="@+id/user_company_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/user_name_row"
+        android:layout_below="@+id/user_position_row"
+        android:text="Compañía"
+        tools:text="Universidad Burgos" />
+</RelativeLayout>
