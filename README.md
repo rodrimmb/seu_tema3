@@ -54,4 +54,13 @@ String[] elements = {"Elemento 1","Elemento 2","Elemento 3","Elemento 4"};
 listView.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, elements));
 ``` 
 
+## Ejercicio 6
+Crea un listado para mostrar datos de un objeto creado por nosotros. El objeto que usaremos en la lista se llamará ```User```. El objeto ```User``` tendrá los siguientes atributos: ```name```, ```surname```, ```email```, ```phone```, ```position``` y ```company```.
+Debes mostrar estos atributos en un listado usando:
+* Adapters crados por ti extendiendo de ```ArrayAdapter<T>```.
+   * Uno de los adapters debe acceder a los elementos de la vista crea el listado usando Butter Knife.
+   * El otro adapter usara el metodo normal de android con "```findViewById()```".
+* Recycle View, que es la libreria que recomienda usar Google.
+
+Además debe haber un boton que añada usuarios de forma automática y se lo notifique a la lista para que aparezcan nuevas filas en tiempo de ejecución.
 
