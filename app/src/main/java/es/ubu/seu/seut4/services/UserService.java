@@ -31,4 +31,12 @@ public class UserService {
     public void addUser(User user) {
         users.add(user);
     }
+
+    public int getCount() {
+        return users.size();
+    }
+
+    public User findByPosition(int position) {
+        return users.get(position);
+    }
 }

@@ -2,23 +2,23 @@ package es.ubu.seu.seut4;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ListView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import es.ubu.seu.seut4.adapters.UserArrayAdapterFactory;
+import es.ubu.seu.seut4.adapters.recycler.RecyclerUserAdapter;
 import es.ubu.seu.seut4.model.User;
 import es.ubu.seu.seut4.services.UserService;
 
 public class SecondActivity extends AppCompatActivity {
 
-    @BindView(R.id.elements_list) ListView listView;
+    @BindView(R.id.elements_list) RecyclerView listView;
     @BindView(R.id.btn_add_user) Button addUser;
 
-    protected UserService userService;
+    private UserService userService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,12 +27,8 @@ public class SecondActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         userService = new UserService();
-        listView.setAdapter(
-                UserArrayAdapterFactory.getArrayAdapterWithButterKnife(
-                        getApplicationContext(),
-                        userService.getAllUsers()
-                )
-        );
+        listView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+        listView.setAdapter(new RecyclerUserAdapter(userService));
         addUser.setOnClickListener(new AddUserClickHandler());
     }
 
@@ -41,9 +37,8 @@ public class SecondActivity extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             if (view.getId() == R.id.btn_add_user) {
-                ArrayAdapter<User> adapter = (ArrayAdapter) listView.getAdapter();
-                addNewUser(new Integer(listView.getCount()));
-                adapter.notifyDataSetChanged();
+                addNewUser(new Integer(userService.getCount()));
+                listView.getAdapter().notifyDataSetChanged();
             }
         }
 
