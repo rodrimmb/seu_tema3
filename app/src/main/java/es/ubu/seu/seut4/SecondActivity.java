@@ -2,13 +2,11 @@ package es.ubu.seu.seut4;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import es.ubu.seu.seut4.adapters.UserAdapterButterKnife;
-import es.ubu.seu.seut4.model.User;
+import es.ubu.seu.seut4.adapters.UserArrayAdapterFactory;
 import es.ubu.seu.seut4.services.UserService;
 
 public class SecondActivity extends AppCompatActivity {
@@ -24,7 +22,11 @@ public class SecondActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         userService = new UserService();
-        ArrayAdapter<User> adapterUsers = new UserAdapterButterKnife(getApplicationContext(), userService.getAllUsers());
-        listView.setAdapter(adapterUsers);
+        listView.setAdapter(
+                UserArrayAdapterFactory.getArrayAdapterWithAndroidNative(
+                        getApplicationContext(),
+                        userService.getAllUsers()
+                )
+        );
     }
 }
