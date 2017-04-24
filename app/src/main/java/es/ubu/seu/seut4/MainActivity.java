@@ -34,12 +34,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void onClick(View v) {
-        if (v.getId() == R.id.btn_submit) {
+    public void onClick(View view) {
+        if (view.getId() == R.id.btn_submit) {
             launchActivity();
         }
 
-        if (v.getId() == R.id.btn_cancel) {
+        if (view.getId() == R.id.btn_cancel) {
             clearInputText();
             Toast.makeText(getApplicationContext(), "Has pulsado cancelar", Toast.LENGTH_SHORT).show();
         }

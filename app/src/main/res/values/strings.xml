@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name">SeuT4</string>
     <string name="main_title">Ejercicio tema 4</string>
-    <string name="second_title">Título Actividad 2</string>
+    <string name="second_title">Listado de Usuarios</string>
     <string name="exercise_title">Titulo de la app</string>
     <string name="placeholder_main">Aqui tu texto...</string>
     <string name="submit">Aceptar</string>
     <string name="cancel">Cancelar</string>
+    <string name="add_user">Añadir Usuario</string>
 </resources>
