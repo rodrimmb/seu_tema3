@@ -1,4 +1,4 @@
-package es.ubu.seu.seut4.adapters;
+package es.ubu.seu.seut3.adapters;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -12,8 +12,8 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import es.ubu.seu.seut4.R;
-import es.ubu.seu.seut4.model.User;
+import es.ubu.seu.seut3.R;
+import es.ubu.seu.seut3.model.User;
 
 /**
  * Created by rodrigo on 24/04/17.

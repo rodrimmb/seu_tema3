@@ -1,5 +1,5 @@
 # Sistemas Ubicuos
-Ejercicios tema 4 de prácticas de Sistemas Ubicuos (Interfaz de Usuario Android)
+Ejercicios tema 3 de prácticas de Sistemas Ubicuos (Interfaz de Usuario Android)
 ## Ejercicio 1
 Crea la primera vista con un título (``` TextView ```), una caja de texto (``` EditText ```) y dos botones (``` Button ```), usa un ``` LinearLayout ``` en vez del ``` ConstraintLayout ``` que se pone por defecto al crear una Empty Activity con el wizard.
 

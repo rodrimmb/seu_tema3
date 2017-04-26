@@ -1,4 +1,4 @@
-package es.ubu.seu.seut4;
+package es.ubu.seu.seut3;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,9 +9,9 @@ import android.widget.Button;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import es.ubu.seu.seut4.adapters.recycler.RecyclerUserAdapter;
-import es.ubu.seu.seut4.model.User;
-import es.ubu.seu.seut4.services.UserService;
+import es.ubu.seu.seut3.adapters.recycler.RecyclerUserAdapter;
+import es.ubu.seu.seut3.model.User;
+import es.ubu.seu.seut3.services.UserService;
 
 public class SecondActivity extends AppCompatActivity {
 
