@@ -1,10 +1,10 @@
-package es.ubu.seu.seut4.services;
+package es.ubu.seu.seut3.services;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import es.ubu.seu.seut4.model.User;
+import es.ubu.seu.seut3.model.User;
 
 /**
  * Created by rodrigo on 23/04/17.

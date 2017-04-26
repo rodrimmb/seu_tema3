@@ -1,4 +1,4 @@
-package es.ubu.seu.seut4.adapters.recycler;
+package es.ubu.seu.seut3.adapters.recycler;
 
 import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
@@ -9,9 +9,9 @@ import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import es.ubu.seu.seut4.R;
-import es.ubu.seu.seut4.model.User;
-import es.ubu.seu.seut4.services.UserService;
+import es.ubu.seu.seut3.R;
+import es.ubu.seu.seut3.model.User;
+import es.ubu.seu.seut3.services.UserService;
 
 /**
  * Created by rodrigo on 24/04/17.

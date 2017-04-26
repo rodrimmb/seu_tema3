@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="es.ubu.seu.seut4.MainActivity">
+    tools:context="es.ubu.seu.seut3.MainActivity">
 
     <RelativeLayout
         android:layout_marginTop="50dp"

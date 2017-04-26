@@ -1,4 +1,4 @@
-package es.ubu.seu.seut4;
+package es.ubu.seu.seut3;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("es.ubu.seu.seut4", appContext.getPackageName());
+        assertEquals("es.ubu.seu.seut3", appContext.getPackageName());
     }
 }

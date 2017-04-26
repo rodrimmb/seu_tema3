@@ -1,11 +1,11 @@
-package es.ubu.seu.seut4.adapters;
+package es.ubu.seu.seut3.adapters;
 
 import android.content.Context;
 import android.widget.ArrayAdapter;
 
 import java.util.List;
 
-import es.ubu.seu.seut4.model.User;
+import es.ubu.seu.seut3.model.User;
 
 /**
  * Created by rodrigo on 24/04/17.

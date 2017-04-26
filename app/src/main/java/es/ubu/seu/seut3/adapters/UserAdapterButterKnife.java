@@ -1,10 +1,8 @@
-package es.ubu.seu.seut4.adapters;
+package es.ubu.seu.seut3.adapters;
 
 import android.content.Context;
-import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,8 +13,8 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import es.ubu.seu.seut4.R;
-import es.ubu.seu.seut4.model.User;
+import es.ubu.seu.seut3.R;
+import es.ubu.seu.seut3.model.User;
 
 /**
  * Created by rodrigo on 23/04/17.

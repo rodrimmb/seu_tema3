@@ -1,4 +1,4 @@
-package es.ubu.seu.seut4.model;
+package es.ubu.seu.seut3.model;
 
 /**
  * Created by rodrigo on 23/04/17.

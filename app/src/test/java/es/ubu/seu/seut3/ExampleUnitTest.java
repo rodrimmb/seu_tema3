@@ -1,4 +1,4 @@
-package es.ubu.seu.seut4;
+package es.ubu.seu.seut3;
 
 import org.junit.Test;
 
